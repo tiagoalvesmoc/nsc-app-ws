@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
     try {
         const clientes = await User.findOne(req.body.filters);
         if (clientes == null) {
-            res.json({ error: true, message: 'User not Found' });
+            res.json({ error: true, message: 'Email ou Senha Invalidos' });
         } else {
             res.json({ error: false, clientes });
         }
