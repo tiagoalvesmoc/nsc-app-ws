@@ -60,7 +60,12 @@ router.post('/filter', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const clientes = await User.findOne(req.body.filters);
-        res.json({ error: false, clientes });
+        if (clientes == null) {
+            res.json({ error: true, message: err.message });
+        } else {
+            res.json({ error: false, clientes });
+        }
+
     } catch (err) {
         res.json({ error: true, message: err.message });
     }
