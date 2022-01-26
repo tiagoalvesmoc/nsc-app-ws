@@ -34,12 +34,12 @@ router.post('/add', async (req, res) => {
 
         const user = await new User(req.body).save()
 
-        res.json({ error: false, message: user })
+        res.json({ error: false, user })
         console.log(user)
     }
     catch (error) {
-        console.log(error)
-        console.log(req.body)
+        // console.log(error)
+        // console.log(req.body)
         res.json({ error: true, message: error })
 
     }
