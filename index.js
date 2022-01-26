@@ -41,9 +41,15 @@ app.set('port', 8000);
 // })
 
 
-app.listen(app.get('port'), function () {
-    console.log('WS escutando porta ' + app.get('port'));
-});
+// app.listen(app.get('port'), function () {
+//     console.log('WS escutando porta ' + app.get('port'));
+// });
+
+app.listen(process.env.PORT || 8000, () => {
+
+    console.log('WS is Up')
+
+})
 
 
 
