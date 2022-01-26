@@ -29,6 +29,12 @@ app.use('/agendamento', require('./src/routes/agendamento.routes'))
 app.set('port', 8000);
 
 
+app.listen(process.env.PORT || app.get('port'), () => {
+
+    console.log('WS is Up')
+
+})
+
 // mongoose.connect('mongodb://localhost:27017/WS_SERVER', function (err) {
 //     if (err) throw err;
 //     console.log("MONGOOSE Connected ");
@@ -45,11 +51,6 @@ app.set('port', 8000);
 //     console.log('WS escutando porta ' + app.get('port'));
 // });
 
-app.listen(process.env.PORT || 8000, () => {
-
-    console.log('WS is Up')
-
-})
 
 
 
