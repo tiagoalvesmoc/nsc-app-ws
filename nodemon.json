@@ -1,0 +1,8 @@
+{
+
+"env":{
+
+"URL_BD":"mongodb+srv://Tiago:Sky10611@nossacasaws.tyzmt.mongodb.net/dbnossacasa?retryWrites=true&w=majority"
+}
+
+}
